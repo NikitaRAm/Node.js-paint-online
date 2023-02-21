@@ -1,9 +1,9 @@
-
 import React from 'react';
 import "./styles/app.scss"
 import SettingBar from "./components/SettingBar";
 import Toolbar from "./components/Toolbar";
 import Canvas from "./components/Canvas";
+
 import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 
 const App = () => {
@@ -22,5 +22,4 @@ const App = () => {
         </BrowserRouter>
     );
 };
-
 export default App;

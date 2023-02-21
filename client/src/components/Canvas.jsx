@@ -54,6 +54,7 @@ const Canvas = observer(() => {
                     case "draw":
                         drawHandler(msg)
                         break
+                    default:
                 }
             }
         }
@@ -72,6 +73,7 @@ const Canvas = observer(() => {
             case "finish":
                 ctx.beginPath()
                 break
+            default:
         }
     }
 
@@ -106,5 +108,6 @@ const Canvas = observer(() => {
         </div>
     );
 });
+
 
 export default Canvas;
