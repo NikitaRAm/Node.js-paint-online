@@ -1,11 +1,12 @@
 import { observer } from "mobx-react-lite";
 import React, { useEffect, useRef, useState } from "react";
-import  {Modal, Button} from "react-bootstrap";
 import {useParams} from "react-router-dom"
 import axios from 'axios'
 import canvasState from "../store/canvasState";
 import toolState from "../store/toolState";
 import Brush from "../tools/Brush";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 import Rect from "../tools/Rect";
 import '../styles/canvas.scss'
