@@ -1,25 +1,20 @@
 import React from 'react';
 import "./styles/app.scss"
-import SettingBar from "./components/SettingBar";
-import Toolbar from "./components/Toolbar";
-import Canvas from "./components/Canvas";
 
-import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
+import {BrowserRouter, Route,  Routes, Navigate} from 'react-router-dom'
+import General from './components/General';
 
 const App = () => {
     return (
         <BrowserRouter>
             <div className="app">
-                <Switch>
-                    <Route path='/:id'>
-                        <Toolbar/>
-                        <SettingBar/>
-                        <Canvas/>
-                    </Route>
-                    <Redirect to={`f${(+new Date).toString(16)}`}/>
-                </Switch>
+                <Routes>
+                    <Route path='/:id' element={<General />}></Route>
+                </Routes>
+                <Navigate to={`f${(+new Date).toString(16)}`}/>
             </div>
         </BrowserRouter>
     );
 };
+
 export default App;
